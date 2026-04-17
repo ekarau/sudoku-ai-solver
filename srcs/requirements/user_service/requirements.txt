@@ -1,0 +1,48 @@
+django
+djangorestframework
+djangorestframework-simplejwt
+django-cors-headers
+psycopg2-binary
+requests
+Pillow
+daphne
+channels
+channels-redis
+djangorestframework
+
+# django: The core web framework itself.
+
+# djangorestframework & djangorestframework-simplejwt: 
+#  These are extensions for Django to easily build REST APIs 
+#  and handle JWT (JSON Web Token) authentication for your users.
+#  REST stands for REpresentational State Transfer.
+#  JSON (JavaScript Object Notation). XML, YAML, CSV, HTML, Binary and etc.
+
+# psycopg2-binary:
+#  PostgreSQL adapter for Python.
+#  It is used to connect to the PostgreSQL database.
+#  In this project, it is used to connect to the PostgreSQL database.
+
+# Pillow:
+#  Python Imaging Library (PIL) is a fork of the Python Imaging Library.
+#  It is used for image processing, such as opening, manipulating, and saving many different image file formats.
+#  In this project, it is used to process and save user avatars.
+
+# django-cors-headers:
+#  due to microservice structure, react request from a different port 
+#  browers have same-origin Policy, and blocks requests to other ports
+#  this header allows requests from other ports by adding Access-Control-Allow-Origin header to responses
+
+# requests:
+#  to make HTTP request from backend
+#  required for remote auth.
+#  send GET req to 42 intra
+
+# daphne & channels: add WebSocket support to Django
+#  Standard Django uses a "WSGI" server, only HTTP reqs.
+#  daphne is the ASGI (Asynchronous Server Gateway Interface) server and takes over
+#  channels is a framework that allows adding WebSocket support to Django
+#  channels-redis is a Redis backend for channels
+#  Redis is like db but on ram and fast
+
+httpx==0.27.0

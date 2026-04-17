@@ -1,0 +1,420 @@
+sudoku.com: easy1
+========== HEURISTIC SOLVER STATS ==========
+Empty Cells      : 43
+Naked Singles    : 43
+Hidden Singles   : 0
+ Hidden Boxes  : 0
+ Hidden Rows   : 0
+ Hidden Columns: 0
+Solved with Logic: 1
+Total Guesses    : 0
+Branching Points : 0
+Human Hardness   : EASY
+============================================
+
+sudoku.com: easy4
+========== HEURISTIC SOLVER STATS ==========
+Empty Cells      : 43
+Naked Singles    : 43
+Hidden Singles   : 0
+ Hidden Boxes  : 0
+ Hidden Rows   : 0
+ Hidden Columns: 0
+Solved with Logic: 1
+Total Guesses    : 0
+Branching Points : 0
+Human Hardness   : EASY
+============================================
+
+sudoku.com: easy5
+========== HEURISTIC SOLVER STATS ==========
+Empty Cells      : 43
+Naked Singles    : 43
+Hidden Singles   : 0
+ Hidden Boxes  : 0
+ Hidden Rows   : 0
+ Hidden Columns: 0
+Solved with Logic: 1
+Total Guesses    : 0
+Branching Points : 0
+Human Hardness   : EASY
+============================================
+
+sudoku.com: easy6
+========== HEURISTIC SOLVER STATS ==========
+Empty Cells      : 43
+Naked Singles    : 43
+Hidden Singles   : 0
+ Hidden Boxes  : 0
+ Hidden Rows   : 0
+ Hidden Columns: 0
+Solved with Logic: 1
+Total Guesses    : 0
+Branching Points : 0
+Human Hardness   : EASY
+============================================
+
+sudoku.com: easy7
+========== HEURISTIC SOLVER STATS ==========
+Empty Cells      : 43
+Naked Singles    : 43
+Hidden Singles   : 0
+ Hidden Boxes  : 0
+ Hidden Rows   : 0
+ Hidden Columns: 0
+Solved with Logic: 1
+Total Guesses    : 0
+Branching Points : 0
+Human Hardness   : EASY
+============================================
+
+sudoku.com: medium1
+========== HEURISTIC SOLVER STATS ==========
+Empty Cells      : 29
+Naked Singles    : 28
+Hidden Singles   : 1
+ Hidden Boxes  : 1
+ Hidden Rows   : 0
+ Hidden Columns: 0
+Solved with Logic: 1
+Total Guesses    : 0
+Branching Points : 0
+Human Hardness   : MEDIUM
+============================================
+
+sudoku.com: medium2
+========== HEURISTIC SOLVER STATS ==========
+Empty Cells      : 51
+Naked Singles    : 51
+Hidden Singles   : 0
+ Hidden Boxes  : 0
+ Hidden Rows   : 0
+ Hidden Columns: 0
+Solved with Logic: 1
+Total Guesses    : 0
+Branching Points : 0
+Human Hardness   : HARD
+============================================
+
+sudoku.com: medium3
+========== HEURISTIC SOLVER STATS ==========
+Empty Cells      : 45
+Naked Singles    : 38
+Hidden Singles   : 7
+ Hidden Boxes  : 7
+ Hidden Rows   : 0
+ Hidden Columns: 0
+Solved with Logic: 1
+Total Guesses    : 0
+Branching Points : 0
+Human Hardness   : MEDIUM
+============================================
+
+sudoku.com: medium4
+========== HEURISTIC SOLVER STATS ==========
+Empty Cells      : 43
+Naked Singles    : 43
+Hidden Singles   : 0
+ Hidden Boxes  : 0
+ Hidden Rows   : 0
+ Hidden Columns: 0
+Solved with Logic: 1
+Total Guesses    : 0
+Branching Points : 0
+Human Hardness   : EASY
+============================================
+
+sudoku.com: medium5
+========== HEURISTIC SOLVER STATS ==========
+Empty Cells      : 45
+Naked Singles    : 42
+Hidden Singles   : 3
+ Hidden Boxes  : 3
+ Hidden Rows   : 0
+ Hidden Columns: 0
+Solved with Logic: 1
+Total Guesses    : 0
+Branching Points : 0
+Human Hardness   : MEDIUM
+============================================
+
+sudoku.com: hard1
+========== HEURISTIC SOLVER STATS ==========
+Empty Cells      : 51
+Naked Singles    : 51
+Hidden Singles   : 0
+ Hidden Boxes  : 0
+ Hidden Rows   : 0
+ Hidden Columns: 0
+Solved with Logic: 1
+Total Guesses    : 0
+Branching Points : 0
+Human Hardness   : HARD
+============================================
+
+sudoku.com: hard2
+========== HEURISTIC SOLVER STATS ==========
+Empty Cells      : 51
+Naked Singles    : 51
+Hidden Singles   : 0
+ Hidden Boxes  : 0
+ Hidden Rows   : 0
+ Hidden Columns: 0
+Solved with Logic: 1
+Total Guesses    : 0
+Branching Points : 0
+Human Hardness   : HARD
+============================================
+
+sudoku.com: hard3
+========== HEURISTIC SOLVER STATS ==========
+Empty Cells      : 51
+Naked Singles    : 51
+Hidden Singles   : 0
+ Hidden Boxes  : 0
+ Hidden Rows   : 0
+ Hidden Columns: 0
+Solved with Logic: 1
+Total Guesses    : 0
+Branching Points : 0
+Human Hardness   : HARD
+============================================
+
+sudoku.com: hard4
+========== HEURISTIC SOLVER STATS ==========
+Empty Cells      : 51
+Naked Singles    : 48
+Hidden Singles   : 3
+ Hidden Boxes  : 3
+ Hidden Rows   : 0
+ Hidden Columns: 0
+Solved with Logic: 1
+Total Guesses    : 0
+Branching Points : 0
+Human Hardness   : HARD
+============================================
+
+sudoku.com: hard5
+========== HEURISTIC SOLVER STATS ==========
+Empty Cells      : 53
+Naked Singles    : 34
+Hidden Singles   : 19
+ Hidden Boxes  : 19
+ Hidden Rows   : 0
+ Hidden Columns: 0
+Solved with Logic: 1
+Total Guesses    : 0
+Branching Points : 0
+Human Hardness   : HARD
+============================================
+
+sudoku.com: expert1
+========== HEURISTIC SOLVER STATS ==========
+Empty Cells      : 53
+Naked Singles    : 36
+Hidden Singles   : 17
+ Hidden Boxes  : 17
+ Hidden Rows   : 0
+ Hidden Columns: 0
+Solved with Logic: 1
+Total Guesses    : 0
+Branching Points : 0
+Human Hardness   : HARD
+============================================
+
+sudoku.com: expert2
+========== HEURISTIC SOLVER STATS ==========
+Empty Cells      : 56
+Naked Singles    : 54
+Hidden Singles   : 2
+ Hidden Boxes  : 2
+ Hidden Rows   : 0
+ Hidden Columns: 0
+Solved with Logic: 1
+Total Guesses    : 0
+Branching Points : 0
+Human Hardness   : MASTER
+============================================
+
+sudoku.com: expert3
+========== HEURISTIC SOLVER STATS ==========
+Empty Cells      : 53
+Naked Singles    : 40
+Hidden Singles   : 13
+ Hidden Boxes  : 11
+ Hidden Rows   : 0
+ Hidden Columns: 2
+Solved with Logic: 1
+Total Guesses    : 0
+Branching Points : 0
+Human Hardness   : HARD
+============================================
+
+sudoku.com: expert4
+========== HEURISTIC SOLVER STATS ==========
+Empty Cells      : 51
+Naked Singles    : 51
+Hidden Singles   : 0
+ Hidden Boxes  : 0
+ Hidden Rows   : 0
+ Hidden Columns: 0
+Solved with Logic: 1
+Total Guesses    : 0
+Branching Points : 0
+Human Hardness   : HARD
+============================================
+
+sudoku.com: master1
+========== HEURISTIC SOLVER STATS ==========
+Empty Cells      : 58
+Naked Singles    : 41
+Hidden Singles   : 17
+ Hidden Boxes  : 13
+ Hidden Rows   : 3
+ Hidden Columns: 1
+Solved with Logic: 1
+Total Guesses    : 0
+Branching Points : 0
+Human Hardness   : MASTER
+============================================
+
+sudoku.com: master2
+========== HEURISTIC SOLVER STATS ==========
+Empty Cells      : 57
+Naked Singles    : 42
+Hidden Singles   : 15
+ Hidden Boxes  : 14
+ Hidden Rows   : 1
+ Hidden Columns: 0
+Solved with Logic: 1
+Total Guesses    : 0
+Branching Points : 0
+Human Hardness   : MASTER
+============================================
+
+sudoku.com: master3
+========== HEURISTIC SOLVER STATS ==========
+Empty Cells      : 56
+Naked Singles    : 47
+Hidden Singles   : 9
+ Hidden Boxes  : 7
+ Hidden Rows   : 1
+ Hidden Columns: 1
+Solved with Logic: 1
+Total Guesses    : 0
+Branching Points : 0
+Human Hardness   : MASTER
+============================================
+
+sudoku.com: master4
+========== HEURISTIC SOLVER STATS ==========
+Empty Cells      : 56
+Naked Singles    : 41
+Hidden Singles   : 15
+ Hidden Boxes  : 13
+ Hidden Rows   : 2
+ Hidden Columns: 0
+Solved with Logic: 1
+Total Guesses    : 0
+Branching Points : 0
+Human Hardness   : MASTER
+============================================
+
+sudoku.com: master5
+========== HEURISTIC SOLVER STATS ==========
+Empty Cells      : 58
+Naked Singles    : 15
+Hidden Singles   : 12
+ Hidden Boxes  : 11
+ Hidden Rows   : 0
+ Hidden Columns: 1
+Solved with Logic: 0
+Total Guesses    : 62
+Branching Points : 2
+Human Hardness   : EXTREME
+============================================
+
+sudoku.com: extreme1
+========== HEURISTIC SOLVER STATS ==========
+Empty Cells      : 53
+Naked Singles    : 5
+Hidden Singles   : 6
+ Hidden Boxes  : 5
+ Hidden Rows   : 0
+ Hidden Columns: 1
+Solved with Logic: 0
+Total Guesses    : 206
+Branching Points : 11
+Human Hardness   : EXTREME
+============================================
+
+sudoku.com: extreme2
+========== HEURISTIC SOLVER STATS ==========
+Empty Cells      : 59
+Naked Singles    : 2
+Hidden Singles   : 5
+ Hidden Boxes  : 2
+ Hidden Rows   : 1
+ Hidden Columns: 2
+Solved with Logic: 0
+Total Guesses    : 180
+Branching Points : 7
+Human Hardness   : EXTREME
+============================================
+
+sudoku.com: extreme3
+========== HEURISTIC SOLVER STATS ==========
+Empty Cells      : 58
+Naked Singles    : 16
+Hidden Singles   : 9
+ Hidden Boxes  : 8
+ Hidden Rows   : 0
+ Hidden Columns: 1
+Solved with Logic: 0
+Total Guesses    : 125
+Branching Points : 8
+Human Hardness   : EXTREME
+============================================
+
+sudoku.com: extreme4
+========== HEURISTIC SOLVER STATS ==========
+Empty Cells      : 58
+Naked Singles    : 0
+Hidden Singles   : 9
+ Hidden Boxes  : 8
+ Hidden Rows   : 1
+ Hidden Columns: 0
+Solved with Logic: 0
+Total Guesses    : 216
+Branching Points : 14
+Human Hardness   : EXTREME
+============================================
+
+sudoku.com: extreme5
+========== HEURISTIC SOLVER STATS ==========
+Empty Cells      : 59
+Naked Singles    : 0
+Hidden Singles   : 3
+ Hidden Boxes  : 3
+ Hidden Rows   : 0
+ Hidden Columns: 0
+Solved with Logic: 0
+Total Guesses    : 1082
+Branching Points : 88
+Human Hardness   : EXTREME
+============================================
+
+sudoku.com: extreme6
+========== HEURISTIC SOLVER STATS ==========
+Empty Cells      : 58
+Naked Singles    : 14
+Hidden Singles   : 9
+ Hidden Boxes  : 9
+ Hidden Rows   : 0
+ Hidden Columns: 0
+Solved with Logic: 0
+Total Guesses    : 178
+Branching Points : 8
+Human Hardness   : EXTREME
+============================================
+
