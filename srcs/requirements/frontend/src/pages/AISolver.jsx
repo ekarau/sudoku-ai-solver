@@ -66,7 +66,7 @@ const MainLayout = styled.div`
     align-items: flex-start;
     justify-content: center;
     width: 100%;
-    max-width: 1200px;
+    max-width: 1400px;
     animation: ${fadeIn} 0.5s ease-out 0.2s both;
 
     @media (max-width: 1024px)
@@ -77,9 +77,39 @@ const MainLayout = styled.div`
     }
 `;
 
-const BoardWrapper = styled.div`
-    width: 450px;
+const BoardsWrapper = styled.div`
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
     flex-shrink: 0;
+
+    @media (max-width: 1024px)
+    {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+`;
+
+const BoardColumn = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+`;
+
+const BoardLabel = styled.div`
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: ${props => props.$color || '#6b7280'};
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+`;
+
+const BoardWrapper = styled.div`
+    width: ${props => props.$compact ? '360px' : '450px'};
+    flex-shrink: 0;
+    transition: width 0.3s ease;
 
     @media (max-width: 768px)
     {
@@ -214,6 +244,34 @@ const ActionButton = styled.button`
     }
 `;
 
+const SolutionToggleButton = styled.button`
+    width: 100%;
+    padding: 14px;
+    border: 2px solid ${props => props.$active ? '#8b5cf6' : '#e5e7eb'};
+    border-radius: 12px;
+    font-size: 1.05rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s;
+    background: ${props => props.$active ? 'linear-gradient(135deg, #8b5cf6, #7c3aed)' : 'white'};
+    color: ${props => props.$active ? 'white' : '#6b7280'};
+
+    &:hover:not(:disabled)
+    {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3);
+        border-color: #8b5cf6;
+    }
+
+    &:disabled
+    {
+        opacity: 0.4;
+        cursor: not-allowed;
+        transform: none;
+        box-shadow: none;
+    }
+`;
+
 const StatsGrid = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -319,8 +377,10 @@ const EmptyIcon = styled.span`
 const AISolver = () =>
 {
     const [difficulty, setDifficulty] = useState('Medium');
+    const [showSolution, setShowSolution] = useState(false);
     const {
         board,
+        solution,
         algorithm,
         setAlgorithm,
         status,
@@ -349,6 +409,15 @@ const AISolver = () =>
         if (status === 'loading') return '⏳';
         return '⚡';
     };
+
+    const comparedBoard = (showSolution && solution && board)
+        ? board.map((row, r) =>
+            row.map((cell, c) => ({
+                ...cell,
+                isError: !cell.isFixed && cell.value !== '' && cell.value !== solution[r][c].value,
+            }))
+        )
+        : board;
 
     const getFitnessColor = () =>
     {
@@ -436,25 +505,51 @@ const AISolver = () =>
                             >
                                 Reset
                             </ActionButton>
+
+                            <SolutionToggleButton
+                                $active={showSolution}
+                                onClick={() => setShowSolution(prev => !prev)}
+                                disabled={!solution}
+                            >
+                                {showSolution ? '🙈 Hide Solution' : '👁️ Show Solution'}
+                            </SolutionToggleButton>
                         </ControlGroup>
                     </Card>
                 </SidePanel>
 
-                <BoardWrapper>
-                    {board ? (
-                        <SudokuBoard
-                            board={board}
-                            selectedCell={null}
-                            onCellClick={() => {}}
-                        />
-                    ) : (
-                        <EmptyBoard>
-                            <EmptyIcon>🧩</EmptyIcon>
-                            Click "Generate Puzzle"
-                            to get started
-                        </EmptyBoard>
+                <BoardsWrapper>
+                    <BoardColumn>
+                        <BoardLabel $color="#2c3e50">AI Progress</BoardLabel>
+                        <BoardWrapper $compact={showSolution && solution}>
+                            {board ? (
+                                <SudokuBoard
+                                    board={comparedBoard}
+                                    selectedCell={null}
+                                    onCellClick={() => {}}
+                                />
+                            ) : (
+                                <EmptyBoard>
+                                    <EmptyIcon>🧩</EmptyIcon>
+                                    Click "Generate Puzzle"
+                                    to get started
+                                </EmptyBoard>
+                            )}
+                        </BoardWrapper>
+                    </BoardColumn>
+
+                    {showSolution && solution && (
+                        <BoardColumn>
+                            <BoardLabel $color="#8b5cf6">Correct Solution</BoardLabel>
+                            <BoardWrapper $compact>
+                                <SudokuBoard
+                                    board={solution}
+                                    selectedCell={null}
+                                    onCellClick={() => {}}
+                                />
+                            </BoardWrapper>
+                        </BoardColumn>
                     )}
-                </BoardWrapper>
+                </BoardsWrapper>
 
                 <SidePanel>
                     <Card>

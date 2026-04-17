@@ -43,7 +43,7 @@ async def solve(request: SolveRequest):
                 "event": "step",
                 "data": json.dumps(step),
             }
-            await asyncio.sleep(0.05)
+            await asyncio.sleep(0.005)
 
         yield {
             "event": "done",

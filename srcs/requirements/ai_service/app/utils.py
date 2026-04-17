@@ -11,6 +11,14 @@ def get_fixed_positions(puzzle: list[list[int]]) -> set[tuple[int, int]]:
     return fixed
 
 
+def _unique_count(values) -> int:
+    """Counts distinct values in [1..9] using a bitmask. Faster than set() for tiny arrays."""
+    mask = 0
+    for v in values:
+        mask |= 1 << int(v)
+    return bin(mask).count('1')
+
+
 def fitness(grid: np.ndarray) -> int:
     """
     Counts total constraint violations across rows, columns and 3x3 boxes.
@@ -19,13 +27,13 @@ def fitness(grid: np.ndarray) -> int:
     score = 0
 
     for i in range(9):
-        score += 9 - len(set(grid[i, :]))
-        score += 9 - len(set(grid[:, i]))
+        score += 9 - _unique_count(grid[i, :])
+        score += 9 - _unique_count(grid[:, i])
 
     for box_r in range(3):
         for box_c in range(3):
             block = grid[box_r * 3:(box_r + 1) * 3, box_c * 3:(box_c + 1) * 3]
-            score += 9 - len(set(block.flatten()))
+            score += 9 - _unique_count(block.flat)
 
     return score
 
@@ -38,12 +46,12 @@ def row_fitness(grid: np.ndarray) -> int:
     score = 0
 
     for i in range(9):
-        score += 9 - len(set(grid[:, i]))
+        score += 9 - _unique_count(grid[:, i])
 
     for box_r in range(3):
         for box_c in range(3):
             block = grid[box_r * 3:(box_r + 1) * 3, box_c * 3:(box_c + 1) * 3]
-            score += 9 - len(set(block.flatten()))
+            score += 9 - _unique_count(block.flat)
 
     return score
 
@@ -56,7 +64,7 @@ def cost_function(grid: np.ndarray) -> int:
     score = 0
 
     for i in range(9):
-        score += 9 - len(set(grid[i, :]))
-        score += 9 - len(set(grid[:, i]))
+        score += 9 - _unique_count(grid[i, :])
+        score += 9 - _unique_count(grid[:, i])
 
     return score

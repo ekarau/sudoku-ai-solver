@@ -3,10 +3,11 @@ import { solveWithAI } from '../services/aiService';
 
 const useAISolver = () =>
 {
-    const [puzzle, setPuzzle] = useState(null);       // Orijinal puzzle (sabit hücreleri belirlemek için)
-    const [board, setBoard] = useState(null);          // Güncel board durumu
-    const [algorithm, setAlgorithm] = useState('ga');  // "ga" veya "sa"
-    const [status, setStatus] = useState('idle');       // "idle", "loading", "solving", "solved", "failed"
+    const [puzzle, setPuzzle] = useState(null);
+    const [solution, setSolution] = useState(null);
+    const [board, setBoard] = useState(null);
+    const [algorithm, setAlgorithm] = useState('ga');
+    const [status, setStatus] = useState('idle');
     const [stats, setStats] = useState({
         generation: null,
         fitness: null,
@@ -16,7 +17,6 @@ const useAISolver = () =>
 
     const controllerRef = useRef(null);
 
-    // Puzzle'ı SudokuBoard formatına çevir
     const formatBoard = useCallback((rawBoard, originalPuzzle) =>
     {
         if (!rawBoard)
@@ -36,6 +36,7 @@ const useAISolver = () =>
     {
         setStatus('loading');
         setStats({ generation: null, fitness: null, temperature: null, elapsed: null });
+        setSolution(null);
 
         try
         {
@@ -51,6 +52,10 @@ const useAISolver = () =>
 
             setPuzzle(data.board);
             setBoard(formatBoard(data.board, data.board));
+
+            if (data.solution)
+                setSolution(formatBoard(data.solution, data.board));
+
             setStatus('idle');
         }
         catch (err)
@@ -72,7 +77,6 @@ const useAISolver = () =>
             algorithm,
             (stepData) =>
             {
-                // "done" eventi board içermez, sadece geçerli adımları işle
                 if (!stepData.board)
                     return;
 
@@ -124,6 +128,7 @@ const useAISolver = () =>
 
     return {
         puzzle,
+        solution,
         board,
         algorithm,
         setAlgorithm,
